@@ -2,20 +2,19 @@
 
 - [Payment Note](#payment-note)
 - [Merchant Initiated Transactions](#merchant-initiated-transactions)
-  - [Merchant Initiated Transaction Framework - VISA](#merchant-initiated-transaction-framework---visa)
-    - [Background](#background)
-    - [Cardholder Initiated Transactions](#cardholder-initiated-transactions)
-    - [Merchant Initiated Transaction](#merchant-initiated-transaction)
-    - [MIT Use Cases](#mit-use-cases)
-    - [Different types of MIT categories](#different-types-of-mit-categories)
-      - [Incremental](#incremental)
-      - [Resubmission](#resubmission)
-      - [Reauthorization](#reauthorization)
-      - [Delayed Charges](#delayed-charges)
-      - [No Show](#no-show)
-      - [Installment Payments](#installment-payments)
-      - [Recurring Payments](#recurring-payments)
-      - [Unscheduled Credential on File (UCOF)](#unscheduled-credential-on-file-ucof)
+  - [Background](#background)
+  - [Cardholder Initiated Transactions](#cardholder-initiated-transactions)
+  - [Merchant Initiated Transaction](#merchant-initiated-transaction)
+  - [MIT Use Cases](#mit-use-cases)
+  - [Different types of MIT categories](#different-types-of-mit-categories)
+    - [Incremental](#incremental)
+    - [Resubmission](#resubmission)
+    - [Reauthorization](#reauthorization)
+    - [Delayed Charges](#delayed-charges)
+    - [No Show](#no-show)
+    - [Installment Payments](#installment-payments)
+    - [Recurring Payments](#recurring-payments)
+    - [Unscheduled Credential on File (UCOF)](#unscheduled-credential-on-file-ucof)
 - [Strong Customer Authentication](#strong-customer-authentication)
 - [Reference](#reference)
 
@@ -28,12 +27,9 @@ Most authorizations are initiated by a cardholder in person, on the phone, or on
 `
 
 ---
- 
-
-## Merchant Initiated Transaction Framework - VISA
 
 
-### Background
+## Background
 
 Visa implemented two new **Transaction Frameworks** with data values in the authorization messages:
 
@@ -47,7 +43,7 @@ offering the opportunity for **better approval rates**, **fewer customer complai
 
 ---
 
-### Cardholder Initiated Transactions
+## Cardholder Initiated Transactions
 
 A CIT can be any of the following kinds of transactions:
 
@@ -61,7 +57,7 @@ A CIT can be any of the following kinds of transactions:
 
 <br>
 
-### Merchant Initiated Transaction
+## Merchant Initiated Transaction
 
 To comply with the Merchant Initiated Transaction framework, the merchant/acquirer must:
 
@@ -71,7 +67,7 @@ To comply with the Merchant Initiated Transaction framework, the merchant/acquir
 
 ---
 
-### MIT Use Cases
+## MIT Use Cases
 
 The MIT framework covers two types of MITs:
 
@@ -82,7 +78,7 @@ The MIT framework covers two types of MITs:
 
 <br>
 
-### Different types of MIT categories
+## Different types of MIT categories
 
 |          MIT Category          |        Intent        |
 | :----------------------------: | :------------------: |
@@ -97,7 +93,7 @@ The MIT framework covers two types of MITs:
 
 <br>
 
-#### Incremental
+### Incremental
 
 A continuation of a purchase when the originally approved amount is modified to accommodate additional services. Incremental authorizations are typical for `lodging transactions` and `auto rental transactions`.
 
@@ -110,8 +106,9 @@ the authorized amount is insufficient.
 
 - Incremental authorizations must not be used once the original transaction has been submitted for clearing. In such a scenario, a new authorization must be requested, with the appropriate reason code (e.g., delayed charges, reauthorization).
 
+<br>
 
-#### Resubmission
+### Resubmission
 
 Occurs when a cardholder-initiated purchase occurred, but you `could not obtain an authorization at that time`. 
 
@@ -119,81 +116,65 @@ Occurs when a cardholder-initiated purchase occurred, but you `could not obtain 
 
 - When the goods or services were already delivered to the cardholder, Merchants in such scenarios can resubmit the request to recover outstanding debt from cardholders.
 
+<br>
 
-#### Reauthorization
+### Reauthorization
 
-a split shipment occurs when goods are not available for shipment when the cardholder purchases them. When the goods become available to ship, a new authorization is performed, either by you or by CyberSource, to make sure that the cardholder's funds are still available. The reauthorization is performed in one of the following scenarios.
+a `split shipment` occurs when goods are not available for shipment when the cardholder purchases them. When the goods become available to ship, a new authorization is performed to `make sure that the cardholder's funds are still available`.
 
+- A merchant initiates a reauthorization when the completion or fulfillment of
+the original order or service extends beyond the authorization validity limit set by Visa. 
 
+There are two common reauthorization scenarios:
 
-A merchant initiates a reauthorization when the completion or fulfillment of
-the original order or service extends beyond the authorization validity limit set by Visa. There
-are two common reauthorization scenarios:
- Split or delayed shipments at eCommerce retailers. A split shipment occurs when not all
-the goods ordered are available for shipment at the time of purchase. If the fulfillment
+1. Split or delayed shipments at eCommerce retailers. If the fulfillment
 of the goods takes place after the authorization validity limit set by Visa, eCommerce
-merchants perform a separate authorization to ensure that consumer funds are
-available.
- Extended stay hotels, car rentals, and cruise lines. A reauthorization is used for stays,
-voyages, and/or rentals that extend beyond the authorization validity period set by Visa.
+merchants perform a separate authorization to ensure that consumer funds are available.
 
+2. Extended stay hotels, car rentals, and cruise lines. A reauthorization is used for stays, voyages, and/or rentals that extend beyond the authorization validity period set by Visa.
 
-#### Delayed Charges
+<br>
 
-associated with an agreement between you and the cardholder for services rendered. Delayed charges are typical for lodging transactions and auto rental transactions.
+### Delayed Charges
 
+Performed to process a supplemental account `charge after original services have been rendered` and respective payment has been processed.
 
+- Typical for lodging transactions and auto rental transactions.
 
-Delayed charges are performed to process a supplemental account charge
-after original services have been rendered and respective payment has been processed.
+<br>
 
-#### No Show
+### No Show
 
-occurs when you and a cardholder have an agreement for a purchase, but the cardholder does not meet the terms of the agreement. No-show transactions are typically used in hotels and motels for a single-night stay.
+Occurs when you and a cardholder have an agreement for a purchase, but the cardholder does not meet the terms of the agreement. No-show transactions are typically used in hotels and motels for a single-night stay.
 
+- Cardholders can use their Visa cards to make a guaranteed reservation with certain
+merchant segments. 
 
+- A guaranteed reservation ensures that the reservation will be honored and allows a merchant to perform a No Show transaction to charge the cardholder a penalty according to the merchant’s cancellation policy.
 
-Cardholders can use their Visa cards to make a guaranteed reservation with certain
-merchant segments. A guaranteed reservation ensures that the reservation will be honored and
-allows a merchant to perform a No Show transaction to charge the cardholder a penalty
-according to the merchant’s cancellation policy.
-For merchants that accept token-based payment credentials to guarantee a reservation, it is
-necessary to perform a CIT (Account Verification Service) at the time of reservation to be able
-perform a No Show transaction later.
+-  For merchants that accept token-based payment credentials to guarantee a reservation, it is necessary to perform a CIT (Account Verification Service) at the time of reservation to be able perform a No Show transaction later.
 
-#### Installment Payments
+<br>
 
-the result of instructions governed by a contract between you and a cardholder. The instructions enable you to charge a specific amount at specified intervals.
+### Installment Payments
 
+An installment payment is a COF transaction. A series of installment payments consists of multiple transactions that you bill to a cardholder over a period of time agreed to by you and the cardholder for a single purchase of goods or services. The agreement enables you to charge a specific amount at specified intervals.
 
+<br>
 
-A transaction in a series of transactions that use a stored credential and
-that represent cardholder agreement for the merchant to initiate one or more future
-transactions over a period for a single purchase of goods or services
+### Recurring Payments
 
-#### Recurring Payments
+A series of recurring payments consists of multiple transactions that you bill to a cardholder at `fixed`, `regular intervals not to exceed one year between transactions`, representing cardholder agreement for the merchant to initiate future transactions for the purchase of goods or services provided at regular intervals.
 
-the result of instructions governed by a contract between you and a cardholder. The instructions enable you to charge a specific or variable amount at specified intervals.
+<br>
 
-
-A transaction in a series of transactions that use a stored credential and
-that are processed at fixed, regular intervals (not to exceed one year between transactions),
-representing cardholder agreement for the merchant to initiate future transactions for the
-purchase of goods or services provided at regular intervals.
-
-#### Unscheduled Credential on File (UCOF)
+### Unscheduled Credential on File (UCOF)
 
 An unscheduled COF transaction uses stored payment information for a fixed or variable amount that does not occur on a scheduled or regular basis.
 
+- An example of such transaction is an account auto-top up transaction.
 
-
-A transaction using a stored credential for a fixed or
-variable amount that does not occur on a scheduled or regularly occurring transaction date,
-where the cardholder has provided consent for the merchant to initiate one or more future
-transactions. An example of such transaction is an account auto-top up transaction.
-
----
-
+- Auto top-up means when your account drops below £3 it'll automatically top up by the amount you've selected (via credit / debit card), up to a maximum per month that you've specified.
 
 ***
 
