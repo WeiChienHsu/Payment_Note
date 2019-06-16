@@ -15,8 +15,18 @@
     - [Installment Payments](#installment-payments)
     - [Recurring Payments](#recurring-payments)
     - [Unscheduled Credential on File (UCOF)](#unscheduled-credential-on-file-ucof)
+- [Payments Service Directive 2 - PSD2](#payments-service-directive-2---psd2)
+  - [PSD2 Timeline](#psd2-timeline)
+  - [PSD2: 6 months of grandfathering (From a lawyer's perspective)](#psd2-6-months-of-grandfathering-from-a-lawyers-perspective)
+    - [What relevant information is to be provided to the competent authorities](#what-relevant-information-is-to-be-provided-to-the-competent-authorities)
+  - [What will PSD2 and SCA mean for Merchants](#what-will-psd2-and-sca-mean-for-merchants)
+    - [Two-factor authentication as standard](#two-factor-authentication-as-standard)
+    - [SCA Exemptions](#sca-exemptions)
+    - [Out of scope Trabsactions regardless of their value](#out-of-scope-trabsactions-regardless-of-their-value)
+    - [Grandfathering Rule](#grandfathering-rule)
+    - [Tools that can increase exemption levels](#tools-that-can-increase-exemption-levels)
+    - [SCA apply to pre-loaded e-Wallets](#sca-apply-to-pre-loaded-e-wallets)
 - [Strong Customer Authentication](#strong-customer-authentication)
-- [PSD2 Topic](#psd2-topic)
 - [Reference](#reference)
 
 ---
@@ -179,13 +189,9 @@ An unscheduled COF transaction uses stored payment information for a fixed or va
 
 ***
 
-# Strong Customer Authentication
+# Payments Service Directive 2 - PSD2
 
-
-
-***
-
-# PSD2 Topic
+## PSD2 Timeline
 
 1. On `October 8, 2015`, the European Parliament adopted the European Commission proposal to create safer and more innovative European payments (PSD2, Directive (EU) 2015/2366). 
 
@@ -209,6 +215,117 @@ The new rules aim to better protect consumers when they pay online, promote the 
 
 7. On `September 14, 2019`, The final deadline for all companies within the EU to comply with PSD2’s Regulatory Technical Standard (RTS) pertaining to directive (EU) 2015/2366 (PSD2)
 
+
+---
+
+## PSD2: 6 months of grandfathering (From a lawyer's perspective)
+
+[Auther: Tudor Nistor](https://www.linkedin.com/in/tudor-nistor-ioan/) - payment services lawyer, specialised on payments and e-money regulatory matters.
+
+> 6 months of grandfathering, after that is possible to loose your authorisation.
+
+<br>
+
+`PSD2` must be transposed into the national laws by 13 January 2018. However, payment institutions which have already obtained authorisation under Directive `PSD1` will be **grandfathered to continue operating under their existing authorisation until 13 July 2018**. 
+
+In order to perform the activities, for which they have been authorised, beyond this transitional period, the existing payment institutions and e-money issuers would need to submit all relevant information required under PSD2 to the competent authorities that have granted them their existing licenses and fully comply with the relevant PSD2 requirements.
+
+---
+
+### What relevant information is to be provided to the competent authorities
+
+1. Procedure to monitor, handle and follow up on security incidents and security-related customer complaints, including an incidents reporting mechanism.
+
+2. Process to file, monitor, track and restrict access to sensitive payment data.
+
+3. Business continuity arrangements - including a clear identification of the critical operations, effective contingency plans and a procedure to regularly test and review the adequacy and efficiency of such plans.
+
+4. The principles and definitions applicable to the collection of statistical data on performance, transactions and fraud.
+
+5. Security policy document - including a detailed risk assessment in relation to its payment services and a description of security control and mitigation measures taken to adequately protect payment service users against the risks identified, including fraud and illegal use of sensitive and personal data.
+
+---
+
+## What will PSD2 and SCA mean for Merchants
+
+> The big idea behind PSD2 is to encourage greater competition and innovation.
+
+An initiative called `Access to Accounts (XS2A)` will bring Account Information and Payment Initiation services under regulation and allow **non-banks** to offer payment services.
+
+> The EU wants to improve security and reduce fraud by introducing Strong Consumer Authentication (SCA) for electronic payments.
+
+This feature that will come into force on September 14.
+
+---
+
+### Two-factor authentication as standard
+
+The most common way organisations will comply with SCA for card payments, is to adopt the payment **security process 3DS 2.0** (the latest version of 3D Secure). This provides more potential fraud signals, shares 135 data points and supports biometrics.
+
+SCA will mean extra hoops for shoppers to jump through when making electronic payments. Customers will have to present **two out of three factors** from the following list:
+
+- Something you are (e.g. biometrics, such as a fingerprint)
+
+- Something you have (e.g. a pre-registered device or token generator)
+
+- Something you know (e.g. a password or PIN)
+
+`For the customers`: with SCA, this will become the norm , not the exception. 
+
+`For retailers`: this could sound like awful news (most global merchants will be affected if they have EU issued cards transacting via an EU acquirer). No retailer likes the idea of customers losing their nerve or running out of patience at the checkout because there’s another obstacle in their way.
+
+---
+
+### SCA Exemptions
+
+- `Low value transactions` — Those of €30 or less are not included within SCA. 
+
+- Regular payments of the same amount can be included, but must not accumulate to over €100 or SCA will be triggered
+
+- `Trusted listings` — Consumers can ask the issuer for a merchant to be part of a ‘**trusted payee**’ list
+
+- `Low risk transactions` — The highest value agreed would be €500 and the merchant must maintain a low average fraud rate to keep this
+
+<br>
+
+### Out of scope Trabsactions regardless of their value
+
+- `Merchant Initiated Transactions` (MIT) – Repeat payments
+
+- Mail Order / Telephone Order (MOTO) – Telephone / contact centre payments
+
+- One Leg Out (OLO) – Where the issuer or the acquirer is outside the EEA
+
+<br>
+
+### Grandfathering Rule
+
+- Place to remove the need to re-authenticate existing card-on-file customers.
+
+- However, **any change to that customer’s registration** with the merchant would trigger the need for re-authentication.
+
+<br>
+
+### Tools that can increase exemption levels
+
+- Visa Transaction Advisor: This is a Cybersource tool used to identify the opportunity for an exemption
+
+- Visa Trusted Listing: This allows customers to request that a merchant is added to the trusted listing as part of the 3DS transaction — to remember things for next time
+
+However, sometimes a green light might still get a red light. That’s because, despite all the possible exemptions, **issuers may still decline them and force the extra authentication anyway**.
+
+<br>
+
+### SCA apply to pre-loaded e-Wallets
+
+It’s required that merchants authenticate the load AND authenticate the transaction.
+
+***
+
+# Strong Customer Authentication
+
+
+
 ***
 
 # Reference
@@ -217,4 +334,10 @@ The new rules aim to better protect consumers when they pay online, promote the 
 
 - [cybersource - Apple Pay Integrations : Merchant-Initiated Transactions](http://apps.cybersource.com/library/documentation/dev_guides/apple_payments/SO_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm#href=ch_intro.4.3.html)
 
+- [Contact-Center - PSD2 & SCA: What Do We Need To Know, Right Now?](https://contact-centres.com/psd2-sca-what-do-we-need-to-know-right-now/)
+
+- [SlimPay - PSD2 & Instant Payment Basics – Strong Customer Authentication (SCA)](https://www.slimpay.com/blog/psd2-instant-payment-basics-strong-customer-authentication/)
+
 - [Stripe - Strong Customer Authentication](https://stripe.com/guides/strong-customer-authentication)
+
+- [LinkedIn Post - Published by Tudor Nistor](https://www.linkedin.com/pulse/psd2-6-months-grandfathering-after-possible-loose-your-tudor-nistor/)
