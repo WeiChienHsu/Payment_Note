@@ -16,6 +16,7 @@
     - [Recurring Payments](#recurring-payments)
     - [Unscheduled Credential on File (UCOF)](#unscheduled-credential-on-file-ucof)
 - [Strong Customer Authentication](#strong-customer-authentication)
+- [PSD2 Topic](#psd2-topic)
 - [Reference](#reference)
 
 ---
@@ -180,6 +181,33 @@ An unscheduled COF transaction uses stored payment information for a fixed or va
 
 # Strong Customer Authentication
 
+
+
+***
+
+# PSD2 Topic
+
+1. On `October 8, 2015`, the European Parliament adopted the European Commission proposal to create safer and more innovative European payments (PSD2, Directive (EU) 2015/2366). 
+
+```
+The new rules aim to better protect consumers when they pay online, promote the development and use of innovative online and mobile payments such as through open banking, and make cross-border European payment services safer.
+```
+
+2. On `November 16, 2015`, the Council of the European Union passed PSD2. Member states will *have two years* to incorporate the directive into their national laws and regulations.
+
+3. The EU and many banks are pushing this development with the new Payments Service Directive 2 (PSD2), which has come into force on `13 January 2018`. 
+
+4. Banks need to adapt to these changes that open many technical challenges, but also many strategic opportunities, such as **collaborating with fintech providers**, for the future.
+
+> An important element of PSD2 is the requirement for strong **customer authentication** on the majority of electronic payments.
+
+> Another important element of the directive is the demand for **common and secure communication** (CSC). 
+
+5. On `January 13, 2018`, Directive 2007/64/EC is repealed and replaced by Directive (EU) 2015/2366
+
+6. On `March 14, 2019`, All Financial Institutions offering an API solution must have it available for external testing by **PISPs** and **AISPs**
+
+7. On `September 14, 2019`, The final deadline for all companies within the EU to comply with PSD2’s Regulatory Technical Standard (RTS) pertaining to directive (EU) 2015/2366 (PSD2)
 
 ***
 
