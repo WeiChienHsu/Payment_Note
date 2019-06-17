@@ -17,17 +17,20 @@
     - [Unscheduled Credential on File (UCOF)](#unscheduled-credential-on-file-ucof)
 - [Payments Service Directive 2 - PSD2](#payments-service-directive-2---psd2)
   - [PSD2 Timeline](#psd2-timeline)
-  - [PSD2: 6 months of grandfathering (From a lawyer's perspective)](#psd2-6-months-of-grandfathering-from-a-lawyers-perspective)
+  - [PSD2 in a nutshell](#psd2-in-a-nutshell)
     - [What relevant information is to be provided to the competent authorities](#what-relevant-information-is-to-be-provided-to-the-competent-authorities)
   - [What will PSD2 and SCA mean for Merchants](#what-will-psd2-and-sca-mean-for-merchants)
     - [Two-factor authentication as standard](#two-factor-authentication-as-standard)
     - [SCA Exemptions](#sca-exemptions)
     - [Out of scope Trabsactions regardless of their value](#out-of-scope-trabsactions-regardless-of-their-value)
+      - [Why MITs is out of scope of the SCA](#why-mits-is-out-of-scope-of-the-sca)
+      - [Exception of MITs](#exception-of-mits)
     - [Grandfathering Rule](#grandfathering-rule)
     - [Tools that can increase exemption levels](#tools-that-can-increase-exemption-levels)
     - [SCA apply to pre-loaded e-Wallets](#sca-apply-to-pre-loaded-e-wallets)
+  - [Getting ready for PSD2 and SCA - Amazon Pay](#getting-ready-for-psd2-and-sca---amazon-pay)
 - [Strong Customer Authentication](#strong-customer-authentication)
-- [Reference](#reference)
+- [References](#references)
 
 ---
 
@@ -195,10 +198,6 @@ An unscheduled COF transaction uses stored payment information for a fixed or va
 
 1. On `October 8, 2015`, the European Parliament adopted the European Commission proposal to create safer and more innovative European payments (PSD2, Directive (EU) 2015/2366). 
 
-```
-The new rules aim to better protect consumers when they pay online, promote the development and use of innovative online and mobile payments such as through open banking, and make cross-border European payment services safer.
-```
-
 2. On `November 16, 2015`, the Council of the European Union passed PSD2. Member states will *have two years* to incorporate the directive into their national laws and regulations.
 
 3. The EU and many banks are pushing this development with the new Payments Service Directive 2 (PSD2), which has come into force on `13 January 2018`. 
@@ -213,18 +212,18 @@ The new rules aim to better protect consumers when they pay online, promote the 
 
 6. On `March 14, 2019`, All Financial Institutions offering an API solution must have it available for external testing by **PISPs** and **AISPs**
 
-7. On `September 14, 2019`, The final deadline for all companies within the EU to comply with PSD2’s Regulatory Technical Standard (RTS) pertaining to directive (EU) 2015/2366 (PSD2)
+![ImportantTimeLine](./images/ImportantTimeLine.png)
 
+7. On `April 2019`, 3DS 2.0 liability shift. Both Visa and Mastercard are encouraging banks to get ready for PSD2 by being 3DS 2.0 compliant. 
+
+8. On `September 14, 2019`, The final deadline for all companies within the EU to comply with PSD2’s Regulatory Technical Standard (RTS) pertaining to directive (EU) 2015/2366 (PSD2)
+
+
+9. On `2020`, 3DS 2.0 launches worldwide.
 
 ---
 
-## PSD2: 6 months of grandfathering (From a lawyer's perspective)
-
-[Auther: Tudor Nistor](https://www.linkedin.com/in/tudor-nistor-ioan/) - payment services lawyer, specialised on payments and e-money regulatory matters.
-
-> 6 months of grandfathering, after that is possible to loose your authorisation.
-
-<br>
+## PSD2 in a nutshell
 
 `PSD2` must be transposed into the national laws by 13 January 2018. However, payment institutions which have already obtained authorisation under Directive `PSD1` will be **grandfathered to continue operating under their existing authorisation until 13 July 2018**. 
 
@@ -264,11 +263,14 @@ The most common way organisations will comply with SCA for card payments, is to 
 
 SCA will mean extra hoops for shoppers to jump through when making electronic payments. Customers will have to present **two out of three factors** from the following list:
 
+![TwoFactorAuthentication](./images/TwoFactorAuthentication.png)
+
 - Something you are (e.g. biometrics, such as a fingerprint)
 
 - Something you have (e.g. a pre-registered device or token generator)
 
 - Something you know (e.g. a password or PIN)
+
 
 `For the customers`: with SCA, this will become the norm , not the exception. 
 
@@ -296,6 +298,24 @@ SCA will mean extra hoops for shoppers to jump through when making electronic pa
 
 - One Leg Out (OLO) – Where the issuer or the acquirer is outside the EEA
 
+#### Why MITs is out of scope of the SCA
+
+- Because the transactions are initiated by the payee only without any direct intervention from the payer. 
+
+- This is in the same way as Direct Debits, which are also initiated by payees without any direct intervention from the payer, based on an initial mandate. 
+  
+- The initial authority (or mandate) may itself be caught by the SCA requirement if given electronically under the third ‘other action’ requirements of the RTS, but is not in scope if given on paper or over the telephone. 
+  
+- It doesn’t matter how the authority is first given (paper, by telephone or electronically), so long as it is given validly and proper records are kept, to enable a ‘look-back’ when a transaction is disputed. 
+  
+- It also doesn’t matter if the MITs occur with varying frequency or for varying amounts, so long as they are consistent with the authority given.
+
+#### Exception of MITs
+
+- MITs must be distinguished from ‘**card on file**’ transactions where the payer confirms payment and use of payment card details previously supplied. 
+  
+- Along the lines: `Confirm payment using your default card, card number XXXX XXXX XXXX 1234`. These card payments are not MITs as they are clearly initiated by the payer and so SCA must be applied unless an exemption is available.
+
 <br>
 
 ### Grandfathering Rule
@@ -320,6 +340,11 @@ However, sometimes a green light might still get a red light. That’s because, 
 
 It’s required that merchants authenticate the load AND authenticate the transaction.
 
+---
+
+## Getting ready for PSD2 and SCA - Amazon Pay
+
+
 ***
 
 # Strong Customer Authentication
@@ -328,13 +353,19 @@ It’s required that merchants authenticate the load AND authenticate the transa
 
 ***
 
-# Reference
+# References
 
 - [VISA - Clarifications on Stored Credentials and MIT Framework Mandates](https://usa.visa.com/dam/VCOM/global/support-legal/documents/visa-clarifications-on-stored-credentials.pdf)
 
 - [cybersource - Apple Pay Integrations : Merchant-Initiated Transactions](http://apps.cybersource.com/library/documentation/dev_guides/apple_payments/SO_API/html/wwhelp/wwhimpl/js/html/wwhelp.htm#href=ch_intro.4.3.html)
 
 - [Contact-Center - PSD2 & SCA: What Do We Need To Know, Right Now?](https://contact-centres.com/psd2-sca-what-do-we-need-to-know-right-now/)
+
+- [amazon pay - Getting ready for PSD2 and Strong Customer Authentication (SCA)](https://pay.amazon.co.uk/help/JE5KSJW4SFH2UM8)
+
+- [Osborneclarke fintech - MITs might be out of scope of SCA?](https://www.osborneclarke-fintech.com/2019/02/01/mits-might-be-out-of-scope-of-sca/)
+
+- [pwc - PSD2 in a nutshell: Market environment and implementation timeline](https://www.pwc.com/cz/en/bankovnictvi/assets/psd2-nutshell-n01-en.pdf)
 
 - [SlimPay - PSD2 & Instant Payment Basics – Strong Customer Authentication (SCA)](https://www.slimpay.com/blog/psd2-instant-payment-basics-strong-customer-authentication/)
 
